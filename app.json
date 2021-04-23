@@ -1,0 +1,120 @@
+
+{
+	"env": {
+		"ENV": {
+            "description": "Pass 'True' if hosting on heroku",
+            "value": "True",
+            "required": true
+        },
+        "api_id": {
+            "description": "Get this value from https://my.telegram.org",
+            "required": true
+        },
+        "github_token": {
+            "description": "Generate github OAuth token from: https://github.com/settings/tokens on your github account",
+            "required": true
+        },
+        "api_hash": {
+            "description": "Get this value from https://my.telegram.org",
+            "required": true
+        },
+        "ASSISTANT_BOT_TOKEN": {
+            "description": "Get bot token from https://t.me/BotFather",
+            "required": true
+        },
+        "REPOSITORY": {
+            "description": "your fork's URL or leave it as it is",
+            "value": "https://github.com/pokurt/Nana-Remix.git",
+            "required": false
+        },
+        "ASSISTANT_WORKER": {
+            "description": "Assistant Workers",
+            "value": "5",
+            "required": true
+        },
+        "NANA_WORKER": {
+            "description": "Userbot Workers",
+            "value": "8",
+            "required": true
+        },
+        "REMINDER_UPDATE": {
+            "description": "Assistant will remind you if a new update has been pushed",
+            "value": "True",
+            "required": false
+        },
+        "COMMAND_PREFIXES": {
+            "description": "Any Character for Triggering Commands (eg: . , !) Separate them with spaces",
+            "value": ". , !",
+            "required": true
+        },
+        "NANA_IMG": {
+            "description": "an image url example: (https://telegra.ph/file/0c84f7595dbc71c72d403.jpg)",
+            "required": false
+        },
+        "time_country": {
+            "description": "input your timezone from this list: https://telegra.ph/Time-Zone-list-for-Nana-Remix-07-21",
+            "required": false
+        },
+        "IBM_WATSON_CRED_URL": {
+            "description": "IBM HOST URL, visit https://t.me/nanabotsupport for more help",
+            "required": false
+        },
+        "IBM_WATSON_CRED_PASSWORD": {
+            "description": "IBM HOST PASSWORD, visit https://t.me/nanabotsupport for more help",
+            "required": false
+        },
+        "DB_URI": {
+            "description": "your postgresql Database URL",
+            "required": true
+        },
+        "screenshotlayer_API": {
+            "description": "get the api key from https://screenshotlayer.com",
+            "required": false
+        },
+        "PM_PERMIT": {
+            "description": "Pass 'True' if you want to keep Pm Guard on. else leave empty",
+            "required": false
+        },
+        "lydia_api": {
+            "description": "fill in your api key from https://coffeehouse.intellivoid.net",
+            "required": false
+        },
+        "remove_bg_api": {
+            "description": "get your api key from https://remove.bg",
+            "required": false
+        },
+        "USERBOT_LOAD": {
+            "description": "Fill if you want to load up some modules for your userbot (separate with space)",
+            "required": false
+        },
+        "USERBOT_NOLOAD": {
+            "description": "Fill if you want to ignore some modules for your userbot (separate with space)",
+            "required": false
+        },
+        "ASSISTANT_LOAD": {
+            "description": "Fill if you want to load up some modules for your ASSISTANT (separate with space)",
+            "required": false
+        },
+        "ASSISTANT_NOLOAD": {
+            "description": "Fill if you want to ignore some modules for your ASSISTANT (separate with space)",
+            "required": false
+        },
+        "USERBOT_SESSION": {
+            "description": "Generate your session using strNana.py in the repository",
+            "required": true
+        },
+        "sw_api": {
+            "description": "read spamwatch documentation on how to get the API KEY https://docs.spamwat.ch",
+            "required": false
+        }
+        
+    },
+	"buildpacks": [
+		{ "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest.git" },
+		{ "url": "https://github.com/HasibulKabir/heroku-buildpack-rarlab.git" },
+		{ "url": "https://github.com/opendoor-labs/heroku-buildpack-p7zip" },
+		{ "url": "https://github.com/chrismytton/heroku-buildpack-jq.git" },
+		{ "url": "https://github.com/justaprudev/heroku-buildpack-neofetch.git" },
+		{ "url": "heroku/python" }
+	]
+}

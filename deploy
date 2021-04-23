@@ -1,0 +1,30 @@
+#!/bin/bash
+
+WORK_DIR="app"
+mkdir -p $WORK_DIR
+
+ziplink () {
+    echo "aHR0cHM6Ly9naXRodWIuY29tL3Bva3VydC9OYW5hLVJlbWl4L2FyY2hpdmUvbWFzdGVyLnppcAo=" | base64 -d
+}
+
+setup () {
+    local zippath
+    zippath="$WORK_DIR/temp.zip"
+    curl -H "Authorization: token $(github_token)" -L $(ziplink) > "$zippath"
+    unzip -qq "$zippath" -d "$WORK_DIR"
+    rm -rf "$zippath"
+}
+
+start () {
+    local bot
+    bot=$(cd $WORK_DIR && ls) && mv "$WORK_DIR/$bot" "nana"
+    rm -rf $WORK_DIR
+    cd "nana"
+    git init > /dev/null 2>&1
+    python -m nana
+}
+
+run () {
+    setup
+    start
+}

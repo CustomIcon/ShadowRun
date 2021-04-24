@@ -1,7 +1,6 @@
-
 {
-	"env": {
-		"ENV": {
+    "env": {
+        "ENV": {
             "description": "Pass 'True' if hosting on heroku",
             "value": "True",
             "required": true
@@ -107,14 +106,25 @@
             "description": "read spamwatch documentation on how to get the API KEY https://docs.spamwat.ch",
             "required": false
         }
-        
     },
-	"buildpacks": [
-		{ "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest.git" },
-		{ "url": "https://github.com/HasibulKabir/heroku-buildpack-rarlab.git" },
-		{ "url": "https://github.com/opendoor-labs/heroku-buildpack-p7zip" },
-		{ "url": "https://github.com/chrismytton/heroku-buildpack-jq.git" },
-		{ "url": "https://github.com/justaprudev/heroku-buildpack-neofetch.git" },
-		{ "url": "heroku/python" }
-	]
+    "buildpacks": [
+        {
+            "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest.git"
+        },
+        {
+            "url": "https://github.com/HasibulKabir/heroku-buildpack-rarlab.git"
+        },
+        {
+            "url": "https://github.com/opendoor-labs/heroku-buildpack-p7zip"
+        },
+        {
+            "url": "https://github.com/chrismytton/heroku-buildpack-jq.git"
+        },
+        {
+            "url": "https://github.com/justaprudev/heroku-buildpack-neofetch.git"
+        },
+        {
+            "url": "heroku/python"
+        }
+    ]
 }

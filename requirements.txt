@@ -1,3 +1,4 @@
+aiobml==1.0.0
 aiofiles
 aiohttp==3.7.4
 beautifulsoup4==4.9.1

@@ -16,7 +16,6 @@ start () {
     local bot
     bot=$(cd $WORK_DIR && ls) && mv "$WORK_DIR/$bot" "nana"
     cd "nana"
-    git init > /dev/null 2>&1
     python -m nana
 }
 
